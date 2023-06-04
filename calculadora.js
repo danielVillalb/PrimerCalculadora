@@ -112,6 +112,7 @@ borrarNumero=()=>{
         datosConcatenados+=matrizDatos[i];
     }
     document.getElementById("resultado").innerHTML=datosConcatenados;
+    document.getElementById("resultado2").innerHTML="";
     iteracion--;
 }
 
