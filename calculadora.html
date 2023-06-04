@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"rel="stylesheet"/>
+    <link rel="icon" type="image/jpg" href="https://upload.wikimedia.org/wikipedia/commons/a/ad/Boca-Juniors.jpg"/>
+    <script src="https://kit.fontawesome.com/a6da1f6f54.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="todo">
+
+        <h1>Primer Calculadora</h1>
+        <div class="contenedor-todo"> 
+            
+            <div class="contenedor-resultado">
+                <label class="resultados">Calculadora Villalba</label>
+                <div class="resultado"><p id="resultado"></p></div>
+                <div class="resultado2"><p id="resultado2"></p></div>
+            </div>
+            <div class="contenedor">
+                <div class="contenedor-numeros">
+                    <button id="uno" onclick="escribir(`uno`)">1</button>
+                    <button id="dos" onclick="escribir(`dos`)">2</button>
+                    <button id="tres" onclick="escribir(`tres`)">3</button>
+                    <button id="cuatro" onclick="escribir(`cuatro`)">4</button>
+                    <button id="cinco" onclick="escribir(`cinco`)">5</button>
+                    <button id="seis" onclick="escribir(`seis`)">6</button>
+                    <button id="siete" onclick="escribir(`siete`)">7</button>
+                    <button id="ocho" onclick="escribir(`ocho`)">8</button>
+                    <button id="nueve" onclick="escribir(`nueve`)">9</button>
+                    <button id="punto" onclick="escribir(`punto`)">.</button>
+                    <button id="zero" onclick="escribir(`zero`)">0</button>
+                    <button id="punto" onclick="escribir(`punto`)">.</button>
+                </div>
+                <div class="contenedor-simbolos">
+                    <button id="suma" onclick="operacion(`suma`)">+</button>
+                    <button id="resta" onclick="operacion(`resta`)">-</button>
+                    <button id="porcentaje" onclick="calcularPorcentaje()">%</button>
+                    <button id="dividir" onclick="operacion(`dividir`)">/</button>
+                    <button id="multiplicar" onclick="operacion(`multiplicar`)">*</button>
+                    <button onclick="borrar()">C</button>
+                    <button onclick="borrarNumero()">borr</button>
+                    <!-- <button id="ans" onclick="operacion(`ans`)">ans</button> -->
+                    <button id="igual" onclick="calcular()">=</button>
+                </div> 
+            </div>
+        </div>
+        <!-- <a href="#"><i class="fa-solid fa-house"></i></a> -->
+    </div>
+        <script src="calculadora.js"></script>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
