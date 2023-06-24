@@ -4,11 +4,9 @@
 let datosConcatenados="";
 let datosConcatenados2="";
 let matrizDatos=[],iteracion=0
-let apretoPorcentaje=false;
-let promedio="";
-let promedio2="";
-let datosPromedio="";
-let porcentaje;
+
+
+
 let necesario=0;
 
 /*-----------funciones-----------*/
@@ -31,45 +29,13 @@ escribir=(dato)=>{
 }
 calcular=()=>{
     try {
-        if(apretoPorcentaje){
         document.getElementById("resultado2").innerHTML=eval(datosConcatenados);
-    }else{
-        const resultado = eval(datosConcatenados);
-        document.getElementById("resultado2").innerHTML = resultado;
-        console.log(resultado);
-        apretoPorcentaje=false;
-    }
     } catch (error) {
       console.log("error");
     }
   }
 
-calcularPorcentaje=()=>{
-    apretoPorcentaje=true;
-    datosConcatenados=""
-    for(let i=matrizDatos.length-1;i>=0;i--){
-        if((matrizDatos[i]==="+")||((matrizDatos[i]==="-")||(matrizDatos[i]==="*")||(matrizDatos[i]==="=")||(matrizDatos[i]==="/"))){
-            if(promedio===""){
-            alert("mal sintaxico");
-            break;
-            }
-            necesario=i;
-            break;
-        }else{
-            promedio+=matrizDatos[i];
-        }
-    }
-    if(necesario!==0){
-        for(let j=0;j<necesario;j++){
-            datosPromedio+=matrizDatos[j];
-        }
-    }
-    for(let i=0;i<necesario+1;i++){
-        datosConcatenados2+=matrizDatos[i];
-    }
-    for(let i=promedio.length-1;i>=0;i--){
-        promedio2+=promedio[i];
-    }
+
     datosConcatenados=datosConcatenados2+((eval(datosPromedio)*promedio2)/100);
     document.getElementById("resultado").innerHTML=datosConcatenados;
     /*------reemplazo el valor dentro de la matriz---------*/
@@ -101,9 +67,7 @@ let nuevaMatriz=[];
 borrarNumero=()=>{
     datosConcatenados="";
     datosConcatenados2="";
-    promedio="";
-    promedio2="";
-    datosPromedio="";
+
     matrizDatos.pop();
     matrizDatos;
     console.log("matriz de datos nueva");
