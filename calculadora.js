@@ -37,13 +37,7 @@ calcular=()=>{
 
 
 
-    document.getElementById("resultado").innerHTML=datosConcatenados;
-    /*------reemplazo el valor dentro de la matriz---------*/
-    console.log("matriz de datos: ",matrizDatos)
-
-
-
-}
+    
 borrar=()=>{
     datosConcatenados=""
     datosConcatenados2=""
