@@ -5,6 +5,9 @@ body{
     height: 100vh;
     width:100vw;
     margin:auto;
+    display:flex;
+    justify-content:center;
+    aling-items:center;
 }
 *{
     margin: 0;
